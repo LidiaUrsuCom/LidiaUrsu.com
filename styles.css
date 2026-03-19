@@ -78,6 +78,37 @@ body::before {
 
 .hero-content { position: relative; z-index: 1; }
 
+/* ── HERO PHOTO ── */
+.hero-photo {
+  position: absolute;
+  right: 6rem;
+  top: 0;
+  bottom: 0;
+  width: 36vw;
+  max-width: 500px;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeUp 1s 0.4s forwards;
+}
+
+.hero-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, var(--charcoal) 0%, transparent 18%, transparent 72%, var(--charcoal) 100%),
+    linear-gradient(to right, var(--charcoal) 0%, transparent 18%);
+  z-index: 2;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .hero-tag {
   display: inline-flex;
   align-items: center;
@@ -527,6 +558,7 @@ body::before {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 860px) {
+  .hero-photo { display: none; }
   .hero { padding: 0 2.5rem 4rem; }
   .hero-bottom { flex-direction: column; align-items: flex-start; }
   .hero-cities { align-items: flex-start; }
