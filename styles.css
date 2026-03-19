@@ -83,9 +83,9 @@ body::before {
   position: absolute;
   right: 6rem;
   top: 0;
-  bottom: 0;
-  width: 36vw;
-  max-width: 500px;
+  bottom: 14rem;
+  width: 28vw;
+  max-width: 420px;
   z-index: 1;
   overflow: hidden;
   opacity: 0;
